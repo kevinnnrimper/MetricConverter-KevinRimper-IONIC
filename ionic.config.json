@@ -1,0 +1,7 @@
+{
+  "name": "Tugas1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

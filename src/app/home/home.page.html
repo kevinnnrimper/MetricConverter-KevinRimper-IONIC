@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Metric Converter 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Konversi Metric</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label>Konversi Panjang:</ion-label>
+        <ion-input type="number" [(ngModel)]="panjang"></ion-input>
+        <ion-select [(ngModel)]="satuanPanjang">
+          <ion-select-option value="km">Kilometer</ion-select-option>
+          <ion-select-option value="m">Meter</ion-select-option>
+        </ion-select>
+        <ion-button (click)="konversiPanjang()">Konversi</ion-button>
+        <p>Hasil: {{ hasilPanjang }}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Konversi Berat:</ion-label>
+        <ion-input type="number" [(ngModel)]="berat"></ion-input>
+        <ion-select [(ngModel)]="satuanBerat">
+          <ion-select-option value="mg">Miligram</ion-select-option>
+          <ion-select-option value="g">Gram</ion-select-option>
+        </ion-select>
+        <ion-button (click)="konversiBerat()">Konversi</ion-button>
+        <p>Hasil: {{ hasilBerat }}</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Konversi Suhu:</ion-label>
+        <ion-input type="number" [(ngModel)]="suhu"></ion-input>
+        <ion-select [(ngModel)]="satuanSuhu">
+          <ion-select-option value="c">Celcius</ion-select-option>
+          <ion-select-option value="f">Fahrenheit</ion-select-option>
+        </ion-select>
+        <ion-button (click)="konversiSuhu()">Konversi</ion-button>
+        <p>Hasil: {{ hasilSuhu }}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
